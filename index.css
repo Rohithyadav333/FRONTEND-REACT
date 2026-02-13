@@ -1,0 +1,107 @@
+/* Animated Gradient Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #4e73df, #1cc88a, #36b9cc, #858796);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Card Container */
+.container {
+  width: 370px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  animation: fadeSlide 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade Slide Animation */
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.container h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* Input Focus Animation */
+input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  transform: scale(1.03);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #4e73df;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover Animation */
+button:hover {
+  background: #f8f9fc;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Links */
+a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #ffd700;
+}
+
+/* Paragraph */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
